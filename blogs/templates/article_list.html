@@ -1,0 +1,5 @@
+{% for article in object_list %}
+    <h2><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h2>
+    <p>{{ article.content|truncatewords:30 }}</p>
+{% endfor %}
+<a href="{% url 'article_new' %}">Ajouter un article</a>
